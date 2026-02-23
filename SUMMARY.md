@@ -1,31 +1,44 @@
-# Table of contents
+# Summary
 
-## THE IDEA
+- [AIR3 Docs v2](README.md)
 
-* [Introduction](README.md)
-* [Vision](the-idea/vision.md)
-* [Ecosystem Advantages](the-idea/ecosystem-advantages.md)
+## Getting Started
+- [Quickstart](getting-started/quickstart.md)
+- [Terminology](getting-started/terminology.md)
 
-## Core Features
+## Products
+- [Products Overview](products/overview.md)
+- [AIR3 Agent](products/air3-agent.md)
+- [AIRTrack (Tracking & Simulation)](products/airtrack.md)
+- [AIRTrading (Execution Layer)](products/airtrading.md)
+- [AIRSocial](products/airsocial.md)
+- [AIRSponsor](products/airsponsor.md)
+- [AIRTool](products/airtool.md)
 
-* [AIR3 Agent](core-features/air3-agent.md)
-* [AIR3 Token](core-features/air3-token.md)
-* [Integrated Ecosystem](core-features/integrated-ecosystem.md)
+## AIRTrading Protocol
+- [Whitepaper Index](protocol/whitepaper-index.md)
+- [Protocol Overview](protocol/overview.md)
+- [Vault Model](protocol/vault-model.md)
+- [Withdraw Flow (7d Delay)](protocol/withdraw-flow.md)
+- [Seasons & Epochs](protocol/seasons-and-epochs.md)
+- [Rewards & Buyback](protocol/rewards-and-buyback.md)
+- [Risk Management & Mass Exit Scenarios](protocol/risk-management.md)
+- [Pacifica Execution Layer](protocol/pacifica-execution-layer.md)
+- [Worked Examples](protocol/worked-examples.md)
 
-## Tokenomics
+## Token
+- [AIR3 Utility Flywheel](token/utility-flywheel.md)
+- [Token Utility by Product](token/token-utility-by-product.md)
 
-* [Token Distribution](tokenomics/token-distribution.md)
-* [Utility & Governance](tokenomics/utility-and-governance.md)
-* [Burn Mechanism](tokenomics/burn-mechanism.md)
+## Security & Transparency
+- [Architecture & Auditability](security/architecture-and-auditability.md)
+- [Risks, Limits, and Disclaimers](security/risks-limits-and-disclaimers.md)
 
-## ROADMAP
+## Roadmap
+- [Roadmap 2025-2027](roadmap/roadmap-2025-2027.md)
 
-* [Phase 1: Foundation (Completed)](roadmap/phase-1-foundation-completed.md)
-* [Phase 2: Expansion (In Progress)](roadmap/phase-2-expansion-in-progress.md)
-* [Phase 3: Innovation](roadmap/phase-3-innovation.md)
-* [Phase 4: Future Prospects](roadmap/phase-4-future-prospects.md)
-
-## COMMUNITY
-
-* [Governance](community/governance.md)
-* [Official Links](community/official-links.md)
+## Resources
+- [User Commands (AIR3 Engine)](resources/command-manual.md)
+- [FAQ](resources/faq.md)
+- [Official Links](resources/official-links.md)
+- [Docs Migration Notes](resources/docs-migration-notes.md)
