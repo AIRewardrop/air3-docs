@@ -37,9 +37,12 @@ This docs version consolidates:
 
 ### AIRTrading Engine architecture
 ![AIRTrading Engine diagram](../assets/images/airtrading-engine-diagram.png)
+*Figure: AIRTrading Engine high-level flow showing vault routing, strategy execution, profit splitting, and AIR3 buyback/user reward distribution.*
 
 ### AIRdApp interface (home)
 ![AIRdApp home](../assets/images/airdapp-home.png)
+*Figure: AIRdApp home interface showing the unified entry point for AIR3 modules and community access links.*
 
 ### AIRTrack dashboard
 ![AIRTrack dashboard](../assets/images/airtrack-dashboard.png)
+*Figure: AIRTrack dashboard showing live tracking, chart context, and simulated trade records used for strategy validation.*

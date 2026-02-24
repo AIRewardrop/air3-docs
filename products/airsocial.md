@@ -30,6 +30,7 @@ AIRSocial complements AIR3 and AIRdApp by tracking non-trading engagement:
 ## UI reference
 
 ![AIRSocial Screen](../assets/images/airsocial-screen.png)
+*Figure: AIRSocial module interface with leaderboards, mission tasks, and referral components for participation campaigns.*
 
 ## Notes
 

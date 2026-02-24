@@ -33,6 +33,7 @@ AIRTool is positioned for communities that want:
 ## UI reference
 
 ![AIRTool Screen](../assets/images/airtool-screen.png)
+*Figure: AIRTool module interface for AIR3 agent deployment requests in partner Telegram and Discord communities.*
 
 ## Relationship with AIR3 token utility
 

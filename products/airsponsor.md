@@ -29,6 +29,7 @@ AIRSponsor links utility to visibility:
 ## UI reference
 
 ![AIRSponsor Screen](../assets/images/airsponsor-screen.png)
+*Figure: AIRSponsor module interface outlining sponsored slot activation and live visibility workflow using the AIR3 buy-and-burn model.*
 
 ## Documentation note
 

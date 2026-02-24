@@ -1,96 +1,131 @@
 # Withdraw Flow (7-Day Delay)
 
-This page documents the core withdrawal behavior for AIRTrading.
+This page documents the AIRTrading withdrawal sequence for users exiting a shared vault allocation.
 
-## Core rule
+## Overview
 
-When a user requests to exit:
+AIRTrading uses a single-vault model. Each user owns a share of the vault based on the current value of their allocation relative to total vault equity.
 
-1. Freeze their vault percentage **now**
-2. Close the same percentage of **all** open positions
-3. Create an exit balance (realized value)
-4. Pay after a fixed **7-day delay**
-5. Exclude the user from any further PnL immediately (including the current epoch)
+When a user requests withdrawal, the protocol settles that user by closing the same percentage of **all** open positions, recording the realized result, and releasing funds after a fixed 7-day delay.
 
-The user is no longer exposed during the delay because their share has already been closed and segregated.
+## Core withdrawal logic
 
-## Withdrawal sequence
+When a user submits a withdrawal request:
 
-### Step 1: Freeze user share
+1. The protocol locks the user share percentage at request time (`exitPctNow`)
+2. The vault reduces **all** open positions pro-rata using the same percentage
+3. The realized proceeds are recorded as the user's exit allocation
+4. An `ExitTicket` is created with a fixed unlock time (`now + 7 days`)
+5. The user is excluded immediately from subsequent vault PnL and epoch distributions (including the current epoch)
+
+During the 7-day delay, the user is no longer exposed to vault PnL because the user allocation has already been reduced out of the vault and recorded in the exit flow.
+
+## Step-by-step sequence
+
+### 1) Determine the user exit share
+
+The protocol computes the user's current vault weight at the moment of the request.
+
 - `exitPctNow = userWeightNow`
 
 Example:
-- Vault total value now = 1,000
-- User share value now = 300
+- `vaultTotalEquityNow = 1,000`
+- `userShareValueNow = 300`
 - `exitPctNow = 30%`
 
-### Step 2: Pro-rata close all open positions
-If the vault has positions A, B, C and `exitPctNow = 30%`:
-- close 30% of A
-- close 30% of B
-- close 30% of C
+### 2) Reduce all open positions pro-rata
 
-This action must be reduce-only at the strategy executor / venue side.
+If the vault holds positions A, B, and C, and `exitPctNow = 30%`, the protocol reduces:
 
-### Step 3: Create the exit balance
-The stable value actually recovered from the pro-rata close is the user exit allocation.
+- 30% of position A
+- 30% of position B
+- 30% of position C
 
-- `realizedValueForUser = stable recovered from pro-rata close`
-- `realizedPnlForUser = realizedValueForUser - userPrincipalBasis`
+This preserves fairness across users because the exiting user receives the realized result of the same proportional exposure they held in the vault.
 
-### Step 4: Create ExitTicket with fixed delay
-An exit ticket is created with:
+### 3) Record the realized exit allocation
+
+The stable value recovered from the pro-rata reductions becomes the user's exit allocation.
+
+Recommended terminology:
+
+- `realizedValueForUser`: stable value realized from the pro-rata close
+- `principalBasisForUser`: accounting basis used to measure user PnL
+- `realizedPnlForUser = realizedValueForUser - principalBasisForUser`
+
+This naming keeps a clear distinction between:
+- **vault share** (percentage)
+- **principal basis** (accounting reference)
+- **realized value** (actual proceeds from the withdrawal unwind)
+
+### 4) Create ExitTicket (fixed delay)
+
+An `ExitTicket` is created with the data required for settlement and claim.
+
+Minimum fields:
 - `exitValueStable`
 - `pnlUser` (positive or negative)
 - `unlockTime = now + 7 days`
 
-### Step 5: Immediate exclusion (anti double-pay)
-From the withdraw request onward:
+### 5) Apply immediate exclusion (anti double-counting)
+
+From the moment the withdrawal request is accepted:
+
 - `userExcluded = true`
-- the user is not exposed to further PnL
-- the user does not participate in epoch rewards (including current epoch)
+- the user is not exposed to further vault PnL
+- the user does not participate in epoch reward calculations
+- current epoch inclusion is removed immediately (no carryover to next epoch)
 
-This is explicitly **current epoch exclusion**, not next epoch exclusion.
+This prevents overlap between:
+- withdrawal settlement, and
+- epoch-based profit distribution
 
-## Auditable event (recommended shape)
+## Recommended auditable event structure
 
 `WithdrawRequested(user)`
 
-Fields (example):
+Suggested fields:
 - `vault_equity_now`
 - `user_weight_now`
 - `close_ratio`
 - `positions_closed_summary`
 - `realized_value_stable`
-- `user_principal_basis`
+- `principal_basis_user`
 - `realized_pnl`
 - `unlock_time`
 
-## UI / user-facing messages (clear wording)
+## User-facing communication (clear wording)
 
-Recommended messages:
-- "Withdrawal request accepted. We are closing X% of all vault positions (your current share)."
-- "You are no longer exposed to vault PnL from this moment."
+Recommended UI messaging:
+
+- "Withdrawal request accepted. We are reducing your current share across all vault positions."
+- "Your vault share has been removed from active exposure."
+- "Your exit value and realized PnL have been recorded."
 - "Funds will be claimable in 7 days."
-- "Your exit value and PnL have been recorded in your ExitTicket."
 
-## Positive PnL case on withdrawal
+## Positive and negative settlement outcomes
+
+### If realized PnL is positive
 
 If `pnlUser > 0`:
-- profit component can be converted into AIR3
-- split 50% buyback / 50% user reward (after fee, if applied on exit profit)
-- principal/base capital returns in stable
-- user profit share is paid in AIR3 (users half)
+- the profit component may be converted into AIR3 (implementation-specific rules apply)
+- profit distribution follows the protocol split logic (including fee treatment where applicable)
+- the capital component remains denominated in stable
+- the user receives the user allocation of the profit split in AIR3
 
-## Negative PnL case on withdrawal
+### If realized PnL is negative
 
 If `pnlUser < 0`:
-- loss is absorbed by the user's allocation
-- user receives lower stable payout
-- no AIR3 reward is minted/distributed from a loss
+- the loss is absorbed by the user's allocation
+- the stable payout is reduced accordingly
+- no AIR3 reward is distributed from a loss
 
-## Why this model is robust
+## Why this model is used
 
-This model prevents double counting by separating:
-- user exit value (crystallized now)
-- epoch reward base (active users only)
+This withdrawal model improves accounting clarity and fairness by separating:
+
+- **withdrawal settlement** (user-specific realized result at request time)
+- **epoch distributions** (active-user profit sharing only)
+
+It also gives the user a deterministic path:
+request -> pro-rata reduction -> ExitTicket -> delayed claim.

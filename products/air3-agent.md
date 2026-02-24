@@ -31,6 +31,7 @@ At a high level:
 This structure makes trade communication easier to follow for both community users and external observers.
 
 ![X Trade Traceability Example](../assets/images/x-trade-traceability-example.png)
+*Figure: Example X post flow showing social trade traceability with entry announcement and closing confirmation card including realized PnL.*
 
 *Example of AIR3 trade communication on X, including a closing confirmation card with realized PnL.*
 

@@ -9,6 +9,7 @@ AIR3 documentation describes a multi-layer transparency model designed to make p
 AIRdApp and AIRTrack provide user-facing visibility into product modules, tracked trades, and performance views.
 
 ![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
+*Figure: AIRTrack dashboard showing live tracking, chart context, and simulated trade records used for strategy validation.*
 
 *AIRTrack dashboard view used for strategy tracking, simulation visibility, and performance review.*
 
@@ -23,6 +24,7 @@ Trade communication includes:
 - a public timeline that can be cross-referenced with AIRdApp/AIRTrack context
 
 ![X Trade Traceability Example](../assets/images/x-trade-traceability-example.png)
+*Figure: Example X post flow showing social trade traceability with entry announcement and closing confirmation card including realized PnL.*
 
 *Example social trade traceability flow with closing confirmation card and realized PnL.*
 

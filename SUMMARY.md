@@ -16,14 +16,14 @@
 - [AIRTool](products/airtool.md)
 
 ## AIRTrading Protocol
-- [Protocol Overview](protocol/overview.md)
 - [Whitepaper Index](protocol/whitepaper-index.md)
+- [Protocol Overview](protocol/overview.md)
 - [Vault Model](protocol/vault-model.md)
-- [Withdraw Flow (7-Day Delay)](protocol/withdraw-flow.md)
+- [Withdraw Flow](protocol/withdraw-flow.md)
 - [Seasons and Epochs](protocol/seasons-and-epochs.md)
 - [Rewards and Buyback](protocol/rewards-and-buyback.md)
-- [Risk Management](protocol/risk-management.md)
 - [Pacifica Execution Layer](protocol/pacifica-execution-layer.md)
+- [Risk Management](protocol/risk-management.md)
 - [Worked Examples](protocol/worked-examples.md)
 
 ## Token Utility
@@ -39,5 +39,9 @@
 
 ## Resources
 - [User Commands (AIR3 Engine)](resources/command-manual.md)
-- [FAQ](resources/faq.md)
+- [FAQ Hub](resources/faq.md)
+- [General FAQ](resources/faq-general.md)
+- [AIR3 Agent FAQ](resources/faq-air3-agent.md)
+- [AIRTrack FAQ](resources/faq-airtrack.md)
+- [AIRTrading FAQ](resources/faq-airtrading.md)
 - [Official Links](resources/official-links.md)

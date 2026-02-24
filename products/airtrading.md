@@ -48,5 +48,6 @@ AIRTrading is documented with two complementary visibility layers:
 2. **Social trade traceability** (trade-open and trade-close posts on X, with realized PnL confirmation cards)
 
 ![AIRTrading Engine Diagram](../assets/images/airtrading-engine-diagram.png)
+*Figure: AIRTrading Engine high-level flow showing vault routing, strategy execution, profit splitting, and AIR3 buyback/user reward distribution.*
 
 *AIRTrading Engine high-level flow: deposits, vault execution, profit split, buyback, and user rewards.*

@@ -27,6 +27,7 @@ AIRTrack monitors strategy behavior and records every simulated position lifecyc
 - historical performance review across time windows
 
 ![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
+*Figure: AIRTrack dashboard showing live tracking, chart context, and simulated trade records used for strategy validation.*
 
 *AIRTrack dashboard example showing active/pending trades, chart context, and historical trade records.*
 

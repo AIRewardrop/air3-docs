@@ -15,6 +15,7 @@ The documentation separates products by function so users can understand what ea
 - **AIRdApp**: the application surface where these modules are accessed
 
 ![AIRdApp Home](../assets/images/airdapp-home.png)
+*Figure: AIRdApp home interface showing the unified entry point for AIR3 modules and community access links.*
 
 *AIRdApp home interface showing the AIR product modules and navigation structure.*
 

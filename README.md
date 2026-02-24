@@ -34,6 +34,7 @@ AIR3 combines **social transparency** and **protocol/accounting transparency**.
 - Protocol documentation defines auditable accounting flows for vault exits and epoch settlement
 
 ![AIRdApp Home](assets/images/airdapp-home.png)
+*Figure: AIRdApp home interface showing the unified entry point for AIR3 modules and community access links.*
 
 *AIRdApp product hub with modular access to AIRTrack, AIRTrading, AIRSocial, AIRSponsor, and AIRTool.*
 
@@ -42,6 +43,7 @@ AIR3 combines **social transparency** and **protocol/accounting transparency**.
 The AIRTrading Engine uses a single vault model with percentage-based user shares. A withdrawal request closes the same percentage of **all** open positions pro-rata, creates an exit balance, and settles through a fixed 7-day delay via an ExitTicket.
 
 ![AIRTrading Engine Diagram](assets/images/airtrading-engine-diagram.png)
+*Figure: AIRTrading Engine high-level flow showing vault routing, strategy execution, profit splitting, and AIR3 buyback/user reward distribution.*
 
 *High-level AIRTrading Engine architecture showing vault routing, strategy execution, profit splitting, buyback, and user rewards.*
 

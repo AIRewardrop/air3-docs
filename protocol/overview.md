@@ -38,6 +38,7 @@ The intended operating model documented in this section is **no leverage**. User
 ## Diagram
 
 ![AIRTrading Engine Diagram](../assets/images/airtrading-engine-diagram.png)
+*Figure: AIRTrading Engine high-level flow showing vault routing, strategy execution, profit splitting, and AIR3 buyback/user reward distribution.*
 
 *Reference architecture for the AIRTrading Engine and profit distribution flow.*
 
