@@ -15,29 +15,31 @@ This allows projects to bring AIR3-style intelligence into their own communities
 ## AIRTool scope (as shown in UI)
 
 The UI describes deployment constraints and onboarding requirements, including:
-- Telegram public or private group targeting
-- Discord deployment scope limitations
-- project requirement submission
-- burn verification
-- onboarding / activation process
-- email activation procedure
+
+* Telegram public or private group targeting
+* Discord deployment scope limitations
+* project requirement submission
+* burn verification
+* onboarding / activation process
+* email activation procedure
 
 ## AIRTool feature intent
 
 AIRTool is positioned for communities that want:
-- community support responses
-- market alerts and signals
-- on-chain insight summaries
-- a branded, operational AI presence in their channels
+
+* community support responses
+* market alerts and signals
+* on-chain insight summaries
+* a branded, operational AI presence in their channels
 
 ## UI reference
 
-![AIRTool Screen](../assets/images/airtool-screen.png)
-*Figure: AIRTool module interface for AIR3 agent deployment requests in partner Telegram and Discord communities.*
+![AIRTool Screen](../.gitbook/assets/airtool-screen.png) _Figure: AIRTool module interface for AIR3 agent deployment requests in partner Telegram and Discord communities._
 
 ## Relationship with AIR3 token utility
 
 AIRTool is a direct utility sink for AIR3:
-- buy AIR3
-- burn AIR3
-- unlock agent deployment time/access
+
+* buy AIR3
+* burn AIR3
+* unlock agent deployment time/access

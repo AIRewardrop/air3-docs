@@ -1,4 +1,4 @@
-# AIRTrack
+# AIRTrack (Tracking & Simulation)
 
 AIRTrack is the **live tracking, simulation, and strategy validation layer** of the AIR ecosystem.
 
@@ -8,10 +8,10 @@ It is designed to test strategies in a live environment using real market data a
 
 AIRTrack is:
 
-- a **tracking platform**
-- a **simulation layer**
-- a **strategy validation layer**
-- a **PnL monitoring and logging interface**
+* a **tracking platform**
+* a **simulation layer**
+* a **strategy validation layer**
+* a **PnL monitoring and logging interface**
 
 AIRTrack is **not** the real trade execution environment.
 
@@ -19,17 +19,16 @@ AIRTrack is **not** the real trade execution environment.
 
 AIRTrack monitors strategy behavior and records every simulated position lifecycle, including:
 
-- entry signal generation
-- simulated position opening
-- target and stop levels
-- live PnL tracking
-- position closure and outcome logging
-- historical performance review across time windows
+* entry signal generation
+* simulated position opening
+* target and stop levels
+* live PnL tracking
+* position closure and outcome logging
+* historical performance review across time windows
 
-![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
-*Figure: AIRTrack dashboard showing live tracking, chart context, and simulated trade records used for strategy validation.*
+![AIRTrack Dashboard](../.gitbook/assets/airtrack-dashboard.png) _Figure: AIRTrack dashboard showing live tracking, chart context, and simulated trade records used for strategy validation._
 
-*AIRTrack dashboard example showing active/pending trades, chart context, and historical trade records.*
+_AIRTrack dashboard example showing active/pending trades, chart context, and historical trade records._
 
 ## Signal source and testing scope
 
@@ -42,6 +41,7 @@ The goal is not only to display trades, but to validate how strategy rules behav
 AIRTrack and AIRTrading are connected by a validation gate.
 
 **Workflow**
+
 1. Strategy idea and rule set are defined
 2. Strategy runs in AIRTrack live tracking/simulation
 3. Results are reviewed over live conditions

@@ -6,26 +6,25 @@ The documentation separates products by function so users can understand what ea
 
 ## Product map
 
-- **AIR3 Agent**: the agent interface and public-facing AI experience
-- **AIRTrack**: live trade tracking, simulation, and strategy validation
-- **AIRTrading**: real execution layer for validated strategies
-- **AIRSocial**: community missions and points infrastructure
-- **AIRSponsor**: live sponsor slot product using a buy-and-burn flow
-- **AIRTool**: AIR3 agent rental for third-party Discord/Telegram communities
-- **AIRdApp**: the application surface where these modules are accessed
+* **AIR3 Agent**: the agent interface and public-facing AI experience
+* **AIRTrack**: live trade tracking, simulation, and strategy validation
+* **AIRTrading**: real execution layer for validated strategies
+* **AIRSocial**: community missions and points infrastructure
+* **AIRSponsor**: live sponsor slot product using a buy-and-burn flow
+* **AIRTool**: AIR3 agent rental for third-party Discord/Telegram communities
+* **AIRdApp**: the application surface where these modules are accessed
 
-![AIRdApp Home](../assets/images/airdapp-home.png)
-*Figure: AIRdApp home interface showing the unified entry point for AIR3 modules and community access links.*
+![AIRdApp Home](../.gitbook/assets/airdapp-home.png) _Figure: AIRdApp home interface showing the unified entry point for AIR3 modules and community access links._
 
-*AIRdApp home interface showing the AIR product modules and navigation structure.*
+_AIRdApp home interface showing the AIR product modules and navigation structure._
 
 ## Validation-to-execution pipeline
 
 AIRTrack and AIRTrading are intentionally separated.
 
-- AIRTrack is used to test and observe strategy behavior in a live environment
-- AIRTrading is used to execute approved strategies in the real execution environment
-- Strategies move from AIRTrack to AIRTrading only after passing live validation criteria
+* AIRTrack is used to test and observe strategy behavior in a live environment
+* AIRTrading is used to execute approved strategies in the real execution environment
+* Strategies move from AIRTrack to AIRTrading only after passing live validation criteria
 
 This separation improves operational clarity, user communication, and product trust.
 
@@ -40,9 +39,9 @@ AIR3 uses multiple transparency layers:
 
 ## Product pages
 
-- [AIR3 Agent](air3-agent.md)
-- [AIRTrack (Tracking & Simulation)](airtrack.md)
-- [AIRTrading (Execution Layer)](airtrading.md)
-- [AIRSocial](airsocial.md)
-- [AIRSponsor](airsponsor.md)
-- [AIRTool](airtool.md)
+* [AIR3 Agent](air3-agent.md)
+* [AIRTrack (Tracking & Simulation)](airtrack.md)
+* [AIRTrading (Execution Layer)](airtrading.md)
+* [AIRSocial](airsocial.md)
+* [AIRSponsor](airsponsor.md)
+* [AIRTool](airtool.md)
