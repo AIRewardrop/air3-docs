@@ -1,40 +1,33 @@
 # Market Structure and Liquidity
 
-This page documents the public market and liquidity references used to track AIR3 on Solana.
+This page lists the primary public market references for AIR3 liquidity and price discovery.
 
-## Trading and Analytics References
+## Primary Market Tracking
 
-### DexScreener
-- [AIR3 on DexScreener](https://dexscreener.com/solana/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+- **DexScreener:** [AIR3 on DexScreener](https://dexscreener.com/solana/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+- **GeckoTerminal (Meteora pool):** [AIR3 / Solana pool page](https://www.geckoterminal.com/it/solana/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
 
-### GeckoTerminal
-- [AIR3 / Meteora pool on GeckoTerminal](https://www.geckoterminal.com/it/solana/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+These dashboards are the main public references for price, liquidity, market cap estimates, and circulating supply snapshots.
 
-## Meteora Liquidity Venues (public references)
+## Meteora Liquidity References
 
-### Meteora Pool (constant pool)
-- **Pool address:** `52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE`
-- **Link:** [Meteora Pool](https://www.meteora.ag/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+AIR3 documentation currently references two public Meteora links:
 
-### Meteora DLMM Pool
-- **DLMM pool address:** `2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp`
-- **Link:** [Meteora DLMM](https://www.meteora.ag/dlmm/2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp)
+- **Meteora DLMM:** [DLMM pool](https://www.meteora.ag/dlmm/2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp)
+- **Meteora pool page:** [Pool page](https://www.meteora.ag/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
 
-## Launch Context (Moonshot / Moonit + Meteora)
+## What Users Should Verify
 
-AIR3 was launched through a Moonshot fair-launch flow (now Moonit), with liquidity routed into Meteora infrastructure.  
-This launch model is relevant because it defines the initial market structure and the way early liquidity/fees are handled by the launch stack.
+Before relying on live figures, users should verify:
+- current liquidity depth
+- recent trading volume
+- spread and execution conditions
+- current circulating supply snapshot (dashboard estimate)
 
-The Moonshot / Meteora launch model is documented publicly by Moonit and Meteora and can be consulted for the general mechanics of the launch venue.
+Live market values are dynamic and may change continuously.
 
-## How to use this page
+## Related Pages
 
-Use this page for:
-- market dashboards
-- liquidity pool references
-- external verification links
-
-Use the other tokenomics pages for:
-- supply and burn reporting
-- contract and address references
-- tokenomics narrative and product linkage
+- [Tokenomics Overview](overview.md)
+- [Supply, Burns, and Reporting](supply-and-burn-tracking.md)
+- [Contracts and Addresses](contracts-and-addresses.md)

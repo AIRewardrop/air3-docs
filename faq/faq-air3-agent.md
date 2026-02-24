@@ -26,4 +26,4 @@ No. They are ecosystem utility products. AIRTrading is the execution product. AI
 
 ## Why is AIR3 token utility connected to these modules?
 
-The objective is to connect real product usage to token demand and burn activity, rather than relying only on speculative utility narratives.
+The objective is to connect real product usage to token demand and burn activity, rather than relying only on speculative utility use cases.

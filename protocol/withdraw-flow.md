@@ -94,7 +94,7 @@ Suggested fields:
 - `realized_pnl`
 - `unlock_time`
 
-## User-facing communication (clear wording)
+## User-Facing Communication
 
 Recommended UI messaging:
 

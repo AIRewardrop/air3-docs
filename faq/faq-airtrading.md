@@ -32,4 +32,4 @@ At protocol level, positive Epoch PnL can be settled in stable assets and split 
 
 ## Does AIRTrading use leverage?
 
-The intended operating model described in these docs is no leverage. The user-facing risk discussion therefore focuses on market moves, slippage, execution timing, fees, and strategy underperformance.
+AIRTrading is presented with a no-leverage intended operating model. The primary user risks are adverse market moves, slippage, execution timing, fees, and strategy underperformance.

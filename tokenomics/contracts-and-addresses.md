@@ -1,41 +1,37 @@
 # Contracts and Addresses
 
-This page collects the AIR3 token address, public liquidity references, and protocol-related addresses used in the AIR3 documentation.
+This page lists the primary AIR3 token and protocol-related addresses referenced in the public documentation.
 
-## AIR3 Token (Solana)
+## AIR3 Token
 
-- **Symbol:** `AIR3`
-- **Network:** `Solana`
-- **Token CA (mint):** `2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon`
+- **Network:** Solana
+- **Token symbol:** AIR3
+- **Token mint (CA):** `2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon`
+- **Solscan token page:** [AIR3 token on Solscan](https://solscan.io/account/2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon)
 
-Explorer:
-- [Solscan — AIR3 token](https://solscan.io/token/2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon)
+## Public Ecosystem Wallets
 
-## Liquidity References (Meteora)
-
-- **Meteora Pool (constant):** `52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE`
-- **Meteora DLMM Pool:** `2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp`
-
-Links:
-- [Meteora Pool](https://www.meteora.ag/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
-- [Meteora DLMM](https://www.meteora.ag/dlmm/2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp)
-- [DexScreener](https://dexscreener.com/solana/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
-- [GeckoTerminal](https://www.geckoterminal.com/it/solana/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
-
-## Public Burn and Treasury References
-
-- **Burn address (Solana incinerator):** `1nc1nerator11111111111111111111111111111111`
 - **Treasury (team multisig 3/4):** `GHuosFEJTtgBYowKPhDSMLkxiDpdL8SbV7i9vwLgPhsR`
+- **Dev wallet (disclosed):** `Ehvs2YznK9JNWHvMQ76i6Tj8wZQWKwgd8USmuWv478kz`
 
-## Planned / Upcoming Protocol Addresses (to be published at deployment)
+## Historical Transparency Reference
 
-These addresses are included for documentation planning and may be updated before production deployment:
+- **Mint / early buy transaction reference:** [Solscan tx](https://solscan.io/tx/3GsBYHNTXQEKoHxPqoaF2t89SDsAUHu5YU7SrArGUzrN8vjAH26fL8isrF3EvhbaBEGkVD27GWwudj9pYj45BuTb)
+
+## Planned / Upcoming Protocol Addresses
+
+The following addresses are reserved in documentation and should be treated as implementation references until final deployment verification.
 
 - **Executor module:** `8poDMAhP6fnQPuJ7g1qZ6xJcK7d83pzo2iMoAmQgzyS2`
-- **Valut / Value module:** `TBD`
-- **Vault contract/account:** `TBD`
+- **Valut / Value module:** `TBD` (to be published after deployment)
+- **Vault contract/account:** `TBD` (to be published after deployment)
 
-## Publication Standard
+## Publication and Update Standard
 
-- Final deployed addresses should be published only after deployment and verification.
-- Any address change should be reflected in this page and announced through official AIR3 channels.
+Final deployed addresses are published after deployment and verification. If a documented address changes, the change should be reflected in this page and in official AIR3 communication channels.
+
+## Related Pages
+
+- [Official Links](../resources/official-links.md)
+- [Supply, Burns, and Reporting](supply-and-burn-tracking.md)
+- [Pacifica Execution Layer](../protocol/pacifica-execution-layer.md)
