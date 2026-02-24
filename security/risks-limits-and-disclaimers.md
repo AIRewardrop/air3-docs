@@ -1,56 +1,52 @@
 # Risks, Limits, and Disclaimers
 
-## General risk statement
+This page summarizes key user-facing risks, operating limits, and implementation boundaries for AIR3 products and the AIRTrading protocol.
 
-AIR3 ecosystem products may involve:
-- market risk
-- execution risk
-- platform/venue risk
-- contract risk
-- oracle/price-source effects (where relevant)
-- fees and operational costs
-- operational risk
+## General product and protocol boundaries
 
-Users can lose capital.
+- Documentation describes product behavior and protocol logic at a functional level.
+- Some details are implementation-specific and may vary by deployed version.
+- Deployed contracts, product interfaces, and official announcements are the source of truth for live behavior.
 
-## Product-specific boundaries
+## AIRTrack vs AIRTrading (important distinction)
 
-### AIRTrack
-AIRTrack is for tracking and simulation/testing. It is not the real execution vault and should not be described as user-fund autotrading.
+- **AIRTrack** is a tracking, simulation, and strategy validation product.
+- **AIRTrack does not execute real trades.**
+- **AIRTrading** is the real execution environment for strategies that pass validation requirements.
 
-### AIRTrading
-AIRTrading is execution and therefore carries the highest risk profile in the stack.
+Users should not interpret AIRTrack simulation outcomes as guaranteed AIRTrading results.
 
-For the intended no-leverage operating model described in these docs, the main user risks are:
+## Primary user-facing risks (no-leverage intended operating model)
+
+The intended operating model documented in this docs set is no leverage. The primary risks presented to users are therefore:
+
+- adverse market moves
 - slippage
-- execution lag under stress
-- venue/API constraints
+- execution timing differences
+- fees and venue costs
 - strategy underperformance
-- fees / execution costs
+- temporary processing delays under stressed conditions
 
-If leverage is introduced in future versions, the docs must explicitly add margin/liquidation risks back into the primary risk section.
+These risks are explained in more detail in the protocol risk management section.
 
-### AIRSocial / AIRSponsor / AIRTool
-These are utility/service modules and should still be governed by clear campaign and service terms.
+## Operational limits
 
-## Mass withdrawal risk
+Depending on deployment version and venue conditions, the system may apply operational limits or safeguards such as:
 
-Large simultaneous exits can force large pro-rata reductions across positions.
-This can create:
-- slippage
-- adverse execution
-- reduced realized exit values vs idealized mark values
-- temporary operational stress during unwind
+- staged execution procedures
+- strategy capacity limits
+- temporary pauses for maintenance or upgrades
+- claim timing rules and settlement windows
+- product availability changes by module
 
 ## No guarantee language
 
-Documentation should avoid implying:
-- guaranteed returns
-- uniform profit percentages for all users
-- risk-free automation
-- always-positive epoch distributions
+- Past results, tracked outcomes, and simulations do not guarantee future performance.
+- Strategy validation improves selection quality but does not eliminate market risk.
+- Public trade traceability improves transparency but does not change execution risk.
 
-## Financial advice disclaimer
+## References
 
-Nothing in the AIR3 docs should be interpreted as financial advice.
-Users should perform their own due diligence and evaluate risk independently.
+- [Risk Management](../protocol/risk-management.md)
+- [Pacifica Execution Layer](../protocol/pacifica-execution-layer.md)
+- [Official Links](../resources/official-links.md)

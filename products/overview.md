@@ -1,59 +1,47 @@
 # Products Overview
 
-AIR3 docs now cover a full multi-product stack. The products share the same ecosystem narrative and AIR3 token utility, but they serve different roles.
+AIRewardrop is a modular product ecosystem built around the AIR3 token and the AIR3 agent.
+
+The documentation separates products by function so users can understand what each module does and how they connect operationally.
 
 ## Product map
 
-### AIR3 Agent (public-facing)
-The flagship AI agent and live MetaHuman interface:
-- 24/7 live presence
-- chart / price / analysis / sentiment style commands
-- autonomous content and community engagement
-- gateway into the AIR ecosystem
+- **AIR3 Agent**: the agent interface and public-facing AI experience
+- **AIRTrack**: live trade tracking, simulation, and strategy validation
+- **AIRTrading**: real execution layer for validated strategies
+- **AIRSocial**: community missions and points infrastructure
+- **AIRSponsor**: live sponsor slot product using a buy-and-burn flow
+- **AIRTool**: AIR3 agent rental for third-party Discord/Telegram communities
+- **AIRdApp**: the application surface where these modules are accessed
 
-### AIRTrack (tracking and simulation)
-AIRTrack is a **live testing and transparency layer**, not an execution venue:
-- simulates positions from AIR3 signals/posts
-- tracks active, pending, and closed trades
-- records realized/unrealized PnL
-- tests rule-based risk management (TP/SL adjustment logic)
-- provides sharable evidence of strategy behavior
-- adds social traceability through X posts tied to trade lifecycle updates
-
-### AIRTrading (execution)
-AIRTrading is the **real execution vault layer**:
-- strategy execution on Pacifica
-- vault accounting and user shares
-- withdrawal requests with delayed payout
-- season/epoch profit settlement
-- AIR3 buyback + user rewards logic
-
-Only strategies that prove themselves in live AIRTrack testing should be promoted to AIRTrading execution.
-
-### AIRSocial
-Community activity and reward layer:
-- leaderboard
-- missions
-- points
-- campaign mechanics
-- future referral / social participation expansion
-
-### AIRSponsor
-Buy + burn sponsor slot system:
-- projects acquire visibility in AIR3 live content
-- brand appears on screen
-- AIR3 can deliver a scripted spoken sponsor call-out
-- designed as a utility + burn mechanism
-
-### AIRTool
-AIR3 agent rental for external communities:
-- AIR3 text agent is included by default only in official AIR3 Telegram/Discord communities
-- third-party projects can rent AIR3 for their own Telegram/Discord
-- unlocks the AIR3 agent feature set for their community via buy + burn combo
-
-## UI reference
-
-### AIRdApp Home
 ![AIRdApp Home](../assets/images/airdapp-home.png)
 
-This screen shows the product navigation and the positioning of AIRTrack, AIRTrading, AIRSocial, AIRSponsor, and AIRTool under a single AIRdApp portal.
+*AIRdApp home interface showing the AIR product modules and navigation structure.*
+
+## Validation-to-execution pipeline
+
+AIRTrack and AIRTrading are intentionally separated.
+
+- AIRTrack is used to test and observe strategy behavior in a live environment
+- AIRTrading is used to execute approved strategies in the real execution environment
+- Strategies move from AIRTrack to AIRTrading only after passing live validation criteria
+
+This separation improves operational clarity, user communication, and product trust.
+
+## Transparency model across products
+
+AIR3 uses multiple transparency layers:
+
+1. **Product UI transparency** through AIRdApp and AIRTrack dashboards
+2. **Social traceability** through trade open and close posts on X
+3. **Protocol/accounting transparency** through documented vault and settlement logic
+4. **On-chain verifiability** where protocol events and balances are exposed by deployed contracts
+
+## Product pages
+
+- [AIR3 Agent](air3-agent.md)
+- [AIRTrack (Tracking & Simulation)](airtrack.md)
+- [AIRTrading (Execution Layer)](airtrading.md)
+- [AIRSocial](airsocial.md)
+- [AIRSponsor](airsponsor.md)
+- [AIRTool](airtool.md)

@@ -1,75 +1,52 @@
-# AIRTrading (Execution Layer)
+# AIRTrading
 
-AIRTrading is the execution product of the AIR ecosystem.
+AIRTrading is the **real execution environment** of the AIR ecosystem.
 
-It is separate from AIRTrack by design:
+It is the strategy deployment layer used for validated strategies that have already passed live testing and observation on AIRTrack.
 
-- **AIRTrack = tracking and live simulation**
-- **AIRTrading = real execution of vetted strategies**
+## What AIRTrading is
 
-## What AIRTrading does
+AIRTrading is:
 
-AIRTrading handles:
-- strategy execution on the chosen venue (Pacifica)
-- vault accounting
-- user deposit/withdraw lifecycle
-- delayed withdrawals with immediate exposure stop
-- season/epoch PnL realization and distribution
-- AIR3 buyback + user rewards split
+- a **real execution layer**
+- a **strategy deployment environment**
+- a **vault-based accounting and distribution system**
+- a **protocol-facing product integrated with AIR3 token utility**
 
-## Strategy admission rule (recommended)
+AIRTrading is not the simulation layer. Strategy testing and validation occur in AIRTrack before promotion.
 
-A strategy should be promoted to AIRTrading only if it has passed AIRTrack live testing based on criteria such as:
-- sufficient sample size
-- stable execution logic
-- controlled drawdown behavior
-- coherent TP/SL and trailing logic
-- acceptable slippage assumptions under target market conditions
+## Strategy admission path
 
-## Execution venue
+Only strategies that pass live validation on AIRTrack are eligible for deployment into AIRTrading.
 
-Current design documentation assumes execution on Pacifica.
-See [Pacifica Execution Layer](../protocol/pacifica-execution-layer.md).
+**Operational pipeline**
+Idea -> AIRTrack live validation -> review -> AIRTrading deployment
 
-## User-friendly risk framing (important)
+This separation keeps the execution layer focused on vetted strategy logic.
 
-AIRTrading is real execution, so returns are not guaranteed and execution quality matters.
+## Vault-based operating model
 
-Current design direction for AIR3 docs:
-- **no leverage intended** (spot-style / fully collateralized risk posture)
-- therefore **no liquidation risk from leverage mechanics** in the intended deployment model
-- users still face real market risk, slippage, fees, and strategy underperformance risk
-
-This keeps the explanation realistic without overstating leverage-related risks that do not apply to the intended operating model.
-
-## Vault-based model
-
-AIRTrading uses a single shared vault portfolio model:
-- users own a percentage of the vault
-- withdrawals are pro-rata across all open positions
-- users are excluded from further PnL immediately at withdraw request
-- payout happens after the fixed delay
+AIRTrading uses a single vault model in which users hold a percentage share of total vault value. Withdrawals are handled using a pro-rata close of all open positions for the requesting user share, followed by a fixed 7-day settlement delay.
 
 See:
 - [Vault Model](../protocol/vault-model.md)
-- [Withdraw Flow (7d Delay)](../protocol/withdraw-flow.md)
-- [Seasons & Epochs](../protocol/seasons-and-epochs.md)
+- [Withdraw Flow (7-Day Delay)](../protocol/withdraw-flow.md)
+- [Seasons and Epochs](../protocol/seasons-and-epochs.md)
 
-## Transparency layers
+## Execution venue
 
-AIRTrading aims to provide two complementary transparency layers:
+AIRTrading execution is designed around Pacifica as the execution venue for perpetual strategy operations.
 
-1. **On-chain / protocol transparency**
-   - withdraw events
-   - pro-rata close accounting
-   - exit tickets
-   - epoch settlement records
+See:
+- [Pacifica Execution Layer](../protocol/pacifica-execution-layer.md)
 
-2. **Social + product transparency**
-   - trade open posts on X (https://x.com/AIRewardrop)
-   - close confirmation cards with PnL on X
-   - AIRdApp / AIRTrack history pages for cross-checking
+## Transparency and reporting
 
-## AIRTrading Engine diagram
+AIRTrading is documented with two complementary visibility layers:
+
+1. **Protocol/accounting transparency** (vault shares, exits, settlement rules, rewards logic)
+2. **Social trade traceability** (trade-open and trade-close posts on X, with realized PnL confirmation cards)
 
 ![AIRTrading Engine Diagram](../assets/images/airtrading-engine-diagram.png)
+
+*AIRTrading Engine high-level flow: deposits, vault execution, profit split, buyback, and user rewards.*

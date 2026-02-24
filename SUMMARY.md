@@ -1,6 +1,6 @@
 # Summary
 
-- [AIR3 Docs v2](README.md)
+- [AIR3 Documentation](README.md)
 
 ## Getting Started
 - [Quickstart](getting-started/quickstart.md)
@@ -16,22 +16,22 @@
 - [AIRTool](products/airtool.md)
 
 ## AIRTrading Protocol
-- [Whitepaper Index](protocol/whitepaper-index.md)
 - [Protocol Overview](protocol/overview.md)
+- [Whitepaper Index](protocol/whitepaper-index.md)
 - [Vault Model](protocol/vault-model.md)
-- [Withdraw Flow (7d Delay)](protocol/withdraw-flow.md)
-- [Seasons & Epochs](protocol/seasons-and-epochs.md)
-- [Rewards & Buyback](protocol/rewards-and-buyback.md)
-- [Risk Management & Mass Exit Scenarios](protocol/risk-management.md)
+- [Withdraw Flow (7-Day Delay)](protocol/withdraw-flow.md)
+- [Seasons and Epochs](protocol/seasons-and-epochs.md)
+- [Rewards and Buyback](protocol/rewards-and-buyback.md)
+- [Risk Management](protocol/risk-management.md)
 - [Pacifica Execution Layer](protocol/pacifica-execution-layer.md)
 - [Worked Examples](protocol/worked-examples.md)
 
-## Token
+## Token Utility
 - [AIR3 Utility Flywheel](token/utility-flywheel.md)
 - [Token Utility by Product](token/token-utility-by-product.md)
 
-## Security & Transparency
-- [Architecture & Auditability](security/architecture-and-auditability.md)
+## Security and Transparency
+- [Architecture and Auditability](security/architecture-and-auditability.md)
 - [Risks, Limits, and Disclaimers](security/risks-limits-and-disclaimers.md)
 
 ## Roadmap
@@ -41,4 +41,3 @@
 - [User Commands (AIR3 Engine)](resources/command-manual.md)
 - [FAQ](resources/faq.md)
 - [Official Links](resources/official-links.md)
-- [Docs Migration Notes](resources/docs-migration-notes.md)

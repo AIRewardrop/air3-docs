@@ -1,95 +1,57 @@
-# AIRTrack (Tracking & Simulation Only)
+# AIRTrack
 
-AIRTrack is the live testing and transparency layer for AIR3 strategies.
+AIRTrack is the **live tracking, simulation, and strategy validation layer** of the AIR ecosystem.
 
-This page is intentionally explicit:
+It is designed to test strategies in a live environment using real market data and social momentum signals, while keeping execution separated from the production trading layer.
 
-## AIRTrack is not execution
+## What AIRTrack is
 
-AIRTrack does **not** execute user funds and is **not** the vault execution engine.
+AIRTrack is:
 
-AIRTrack is used to:
-- test new strategies live
-- simulate trades from AIR3 agent outputs/posts/signals
-- track entries, exits, active/pending/closed states
-- measure realized and unrealized PnL
-- observe strategy behavior over time on a broad ticker universe
-- validate whether a strategy is good enough to be promoted to AIRTrading
+- a **tracking platform**
+- a **simulation layer**
+- a **strategy validation layer**
+- a **PnL monitoring and logging interface**
 
-## Core function
+AIRTrack is **not** the real trade execution environment.
 
-AIRTrack is a simulation layer that monitors the most mentioned and most increased tickers the AIR3 agent verifies on X, then models trade entries from real-time social trends.
+## What AIRTrack does
 
-It is built to cover the widest possible ticker universe by leveraging X trend momentum and AIR3 signal generation.
+AIRTrack monitors strategy behavior and records every simulated position lifecycle, including:
 
-In practical terms:
-- AIR3 posts or verified signals can spawn simulated positions
-- positions are tracked live
-- PnL is updated and logged
-- all moves are visible in one dashboard
-
-## Strategy testing pipeline role
-
-AIRTrack is the staging ground for strategy validation.
-
-The expected pipeline is:
-1. Strategy idea is defined
-2. Strategy runs in AIRTrack live simulation
-3. Performance and stability are reviewed
-4. Risk behavior is reviewed (including stop logic)
-5. Only passing strategies are exported to AIRTrading execution
-
-## Rule-based risk management in AIRTrack
-
-AIRTrack can test rule-based TP/SL management, including dynamic stop tightening as price approaches target.
-
-Example principle:
-- as progress toward TP increases
-- stop loss is moved up to lock in profit
-- strategy behavior is recorded and observable in the dashboard
-
-This makes AIRTrack useful not only for performance reporting, but also for strategy QA.
-
-## Social traceability (X) + dashboard traceability
-
-AIR3 adds a second transparency layer beyond the dashboard itself.
-
-For tracked strategies and agent-driven trade narratives:
-- trade openings are posted on X (https://x.com/AIRewardrop)
-- trade closures are posted with a confirmation card and realized PnL
-- users can cross-check social posts with AIRdApp / AIRTrack history
-
-This gives the ecosystem both:
-- **dashboard transparency** (trade lifecycle and PnL tracking)
-- **social transparency** (timestamped public posts on X)
-
-## UI reference
+- entry signal generation
+- simulated position opening
+- target and stop levels
+- live PnL tracking
+- position closure and outcome logging
+- historical performance review across time windows
 
 ![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
 
-The dashboard shows:
-- active / pending positions
-- chart context
-- entry / TP / SL levels
-- realized PnL stats
-- closed trades history
-- filters and time windows
+*AIRTrack dashboard example showing active/pending trades, chart context, and historical trade records.*
 
-## X trade post example (social traceability)
+## Signal source and testing scope
 
-![AIR3 X Trade Post Example](../assets/images/x-trade-traceability-example.png)
+AIRTrack is built to cover a wide ticker universe by using market activity and social trend inputs, including the most mentioned and most accelerated tickers verified by the AIR agent on X.
 
-Example workflow:
-- post at trade open on X
-- monitor in AIRTrack / AIRdApp
-- post close confirmation card with realized PnL on X
+The goal is not only to display trades, but to validate how strategy rules behave across changing conditions before any strategy is considered for real execution.
 
-## Why this separation matters
+## Strategy progression to AIRTrading
 
-Separating tracking from execution improves:
-- transparency
-- strategy QA
-- user trust
-- risk discipline
+AIRTrack and AIRTrading are connected by a validation gate.
 
-AIRTrack proves behavior. AIRTrading executes only what has passed.
+**Workflow**
+1. Strategy idea and rule set are defined
+2. Strategy runs in AIRTrack live tracking/simulation
+3. Results are reviewed over live conditions
+4. Strategy is promoted to AIRTrading only after passing validation criteria
+
+This product separation is a core trust and risk-control feature of the AIR ecosystem.
+
+## Rule-based risk logic in AIRTrack simulations
+
+AIRTrack simulations may include rule-based TP/SL management, including dynamic stop tightening as price approaches the target. This allows live observation of strategy behavior under consistent rules before deployment decisions are made.
+
+## Transparency role
+
+AIRTrack supports public verifiability by providing a readable history of tracked trades and outcomes that can be cross-referenced with social trade posts and broader AIRdApp views.

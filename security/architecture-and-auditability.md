@@ -1,60 +1,53 @@
 # Architecture and Auditability
 
-## Why auditability matters here
+AIR3 documentation describes a multi-layer transparency model designed to make protocol behavior and trade communication easier to verify.
 
-AIRTrading combines:
-- pooled user capital exposure
-- dynamic strategy execution
-- delayed withdrawals
-- periodic profit distribution
-- token conversion and split logic
+## Transparency layers
 
-Without auditability, users cannot verify fairness.
+### 1) Product interface transparency
 
-## Required auditability surface
+AIRdApp and AIRTrack provide user-facing visibility into product modules, tracked trades, and performance views.
 
-The protocol should make it possible to verify, at minimum:
+![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
 
-### Withdraw path
-- user share at request time
-- close ratio used
-- pro-rata close behavior across all positions
-- realized value
-- PnL sign and amount
-- exit ticket unlock time
-- exclusion state activation time
+*AIRTrack dashboard view used for strategy tracking, simulation visibility, and performance review.*
 
-### Epoch settlement path
-- epoch start and end values
-- realized profit/loss
-- fee
-- net split (buyback/users)
-- active base used for distribution
-- reward index updates
+### 2) Social trade traceability
 
-### Reward claims
-- user index before/after claim
-- claimable amount
-- claim execution amount
+AIR3 publishes trade-related updates on X through the official AIRRewardrop account:
+- https://x.com/AIRewardrop
 
-## Operational transparency (beyond on-chain)
+Trade communication includes:
+- a trade announcement at position opening
+- a closing confirmation card with realized PnL
+- a public timeline that can be cross-referenced with AIRdApp/AIRTrack context
 
-Beyond on-chain events, AIR3 should provide clear off-chain execution visibility where possible:
-- order execution logs
-- reduce-only confirmations
-- slippage metrics
-- error/retry telemetry
-- epoch settlement reports
+![X Trade Traceability Example](../assets/images/x-trade-traceability-example.png)
 
-## Social traceability (X) as a transparency layer
+*Example social trade traceability flow with closing confirmation card and realized PnL.*
 
-AIR3 also adds public, timestamped social traceability:
-- trade opening posts on X (https://x.com/AIRewardrop)
-- trade closure confirmation cards with PnL on X
-- cross-checking against AIRdApp / AIRTrack pages
+### 3) Protocol and accounting transparency
 
-This does not replace on-chain auditability, but it improves public verifiability and user confidence.
+The protocol section documents:
+- vault share logic
+- pro-rata withdrawal processing
+- ExitTicket settlement flow
+- epoch accounting and rewards split
+- user exclusion rules that prevent double allocation
 
-## AIRTrack as a transparency complement
+This makes the accounting model understandable before reading contract-level implementation details.
 
-AIRTrack improves ecosystem transparency by exposing live strategy behavior during simulation/testing, before execution strategies are promoted into AIRTrading.
+### 4) On-chain auditability (where deployed)
+
+Where protocol smart contracts are deployed, on-chain events and balances provide an auditable record of key accounting actions and distribution flows.
+
+The documentation describes expected event semantics and accounting behavior; deployed contract versions remain the source of truth for implementation-specific details.
+
+## Architectural principle
+
+AIR3 uses layered transparency rather than relying on a single interface:
+
+- **social visibility** for public trade communication
+- **product UI visibility** for operational tracking and user navigation
+- **protocol documentation** for accounting logic
+- **on-chain records** for verifiable execution and settlement state (where deployed)

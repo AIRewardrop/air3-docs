@@ -1,60 +1,52 @@
-# AIRTrading Protocol Overview
+# Protocol Overview
 
-AIRTrading Engine is a vault-based execution protocol design for strategies running on Pacifica.
+The AIRTrading protocol defines the accounting and settlement logic used by the AIRTrading Engine.
 
-It is designed to be:
-- auditable
-- deterministic in user exits
-- compatible with epoch-based profit accounting
-- compatible with AIR3 buyback and user reward distribution
-- user-friendly in how risks are explained (realistic, not alarmist)
+This section describes the vault model, user share calculations, withdrawal flow, ExitTicket mechanics, epoch accounting, and AIR3 reward/buyback distribution logic in a clear and auditable format.
 
-## Core principles
+## Scope
+
+This protocol documentation describes the operating logic and accounting model used by the AIRTrading Engine. Specific implementation details may vary by deployed contract version and are implementation-specific unless explicitly stated.
+
+## Core protocol principles
 
 1. **Single vault portfolio**
-   - The vault is one portfolio with open positions.
-   - Users own a percentage of vault value, not isolated positions.
+   - The vault is a single portfolio with open positions.
+   - Each user owns a percentage share of total vault value.
 
-2. **Pro-rata exits**
-   - On withdraw request, the vault closes the same percentage of every open position.
-   - This prevents selective closing behavior.
+2. **Pro-rata withdrawal logic**
+   - A withdrawal request closes the same percentage of all open positions.
+   - The user exit value is based on the value actually realized from that pro-rata close.
 
-3. **Immediate exclusion from PnL**
-   - After withdraw request, the user is no longer exposed to PnL (positive or negative), starting immediately in the current epoch.
+3. **Delayed settlement with immediate exposure stop**
+   - A withdrawal request creates an ExitTicket with a fixed 7-day delay.
+   - The user is excluded immediately from subsequent PnL exposure and epoch distributions.
 
-4. **Delayed payout**
-   - Funds are paid after a fixed 7-day delay through an exit ticket claim flow.
+4. **Epoch-based profit accounting**
+   - Epoch PnL is realized in stable at settlement time.
+   - Positive net profit is converted to AIR3 and split between buyback and user rewards after fees.
 
-5. **Epoch settlement**
-   - PnL can be realized in stable at epoch end (Option A model) and distributed with a 50/50 split between buyback and users after fees.
+5. **Transparency by design**
+   - Product UI visibility through AIRdApp and AIRTrack
+   - Social trade traceability on X (@AIRewardrop)
+   - Protocol and on-chain auditability where deployed
 
-## Risk posture (current docs direction)
+## Operating posture
 
-This docs version assumes a **no-leverage intended operating model**.
+The intended operating model documented in this section is **no leverage**. User-facing risk communication therefore focuses on the primary risks relevant to that posture, such as market moves, slippage, execution timing, fees, and strategy underperformance.
 
-So the main user-facing risks are:
-- market moves
-- slippage
-- execution timing
-- fees
-- strategy underperformance
-
-Not “liquidation fear” as a default narrative.
-
-## Scope of this section
-
-This protocol section documents the operating logic and accounting model. It does not claim final deployed contract implementation details unless explicitly stated by the deployed version.
-
-## Transparency model (on-chain + social)
-
-AIRTrading transparency is designed as a layered system:
-
-- **On-chain/protocol transparency**: withdraw events, exit tickets, settlement accounting
-- **Product transparency**: AIRdApp / AIRTrack history and PnL tracking
-- **Social transparency**: trade open posts and trade close confirmation cards on X (https://x.com/AIRewardrop)
-
-This lets users verify behavior across more than one surface.
-
-## Architecture reference
+## Diagram
 
 ![AIRTrading Engine Diagram](../assets/images/airtrading-engine-diagram.png)
+
+*Reference architecture for the AIRTrading Engine and profit distribution flow.*
+
+## Reading order
+
+- [Vault Model](vault-model.md)
+- [Withdraw Flow (7-Day Delay)](withdraw-flow.md)
+- [Seasons and Epochs](seasons-and-epochs.md)
+- [Rewards and Buyback](rewards-and-buyback.md)
+- [Risk Management](risk-management.md)
+- [Pacifica Execution Layer](pacifica-execution-layer.md)
+- [Worked Examples](worked-examples.md)

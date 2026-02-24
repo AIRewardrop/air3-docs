@@ -1,52 +1,45 @@
 # FAQ
 
-## What is AIRewardrop?
-AIRewardrop is the ecosystem/company building autonomous AI agent infrastructure for crypto, including AIR3 and related dApp modules.
+## What is the difference between AIRTrack and AIRTrading?
 
-## What is AIR3?
-AIR3 is the flagship AI agent and MetaHuman interface of the ecosystem, with analytics, live interaction, and tokenized product utility layers.
+AIRTrack is the live **tracking, simulation, and strategy validation layer**. It tracks and evaluates strategy behavior in live conditions, but it does not execute real trades.
 
-## Is AIRTrack the autotrading product?
-No.
+AIRTrading is the **real execution environment**. Strategies are promoted to AIRTrading only after they pass live validation requirements on AIRTrack.
 
-AIRTrack is a **tracking and simulation** layer used to test strategies live and record performance transparently.
+## Are all trades executed directly from AIRTrack?
 
-## What is AIRTrading then?
-AIRTrading is the **execution layer**. It is the vault-based protocol/execution product for strategies that passed live testing on AIRTrack.
-
-## Why split AIRTrack and AIRTrading?
-To keep strategy testing transparent and separate from real execution risk. AIRTrack validates behavior. AIRTrading executes only proven strategies.
+No. AIRTrack is not the execution engine. AIRTrack is used to observe and validate strategy behavior before deployment decisions are made.
 
 ## How are trades made transparent to users?
-AIR3 uses multiple transparency layers:
-- AIRTrack / AIRdApp trade history and PnL tracking
-- on-chain/protocol accounting events (for vault/withdraw/settlement flows)
-- X posts on https://x.com/AIRewardrop when trades open and close (including close confirmation cards with PnL)
 
-## How do withdrawals work in AIRTrading?
-Conceptually:
-- user share is frozen at request time
-- the same percentage of all positions is closed
-- an ExitTicket is created
-- user is excluded from PnL immediately
-- claim happens after a fixed 7-day delay
+AIR3 uses a layered transparency model:
 
-## What happens if the user exits with a loss?
-Loss is absorbed by the user's allocation. The user receives reduced stable payout and no AIR3 profit reward.
+- trade announcements on X when positions open
+- trade close confirmation cards with realized PnL on X
+- AIRdApp / AIRTrack tracking views for historical context
+- protocol documentation and on-chain accounting transparency where applicable
 
-## What happens if many users exit at once?
-The vault must reduce the same percentage of all positions (pro-rata). The main user-facing risks in the intended no-leverage model are slippage, execution delay, and fees during large unwinds.
+Official X account:
+- https://x.com/AIRewardrop
 
-## Is liquidation risk a core AIRTrading user risk?
-Not in the intended no-leverage operating model documented here.
+## How does user withdrawal work in the AIRTrading vault model?
 
-If leverage is introduced in future versions, margin and liquidation risk must be documented explicitly.
+When a user requests withdrawal, the protocol determines the user's current share of total vault value and closes the same percentage of all open positions pro-rata. The realized value becomes the user's exit balance, an ExitTicket is created, and funds become claimable after a fixed 7-day delay.
 
-## What is AIRSponsor?
-A buy + burn utility flow that unlocks sponsor slots in AIR3 live content, including on-screen presence and scripted call-outs.
+The user is excluded immediately from further PnL exposure and epoch reward distributions once the withdrawal request is accepted.
 
-## What is AIRTool?
-A buy + burn utility flow that unlocks AIR3 agent deployment/rental for third-party Telegram and/or Discord communities.
+## Does the protocol use leverage?
 
-## Is this financial advice?
-No. AIR3 documentation is informational and product-focused. Users should do their own due diligence.
+The intended operating model documented in this version is no leverage. User-facing risk communication therefore focuses on market moves, slippage, execution timing, fees, and strategy underperformance.
+
+## What happens if many users request withdrawal at the same time?
+
+The same pro-rata rule applies. The vault reduces the same aggregate percentage across open positions, creates exit balances for requesting users, and excludes them from further PnL and epoch rewards. Operationally, this can increase execution complexity and slippage, but the accounting rule remains consistent.
+
+## Where can I read the protocol logic?
+
+Start with:
+- [Protocol Overview](../protocol/overview.md)
+- [Withdraw Flow (7-Day Delay)](../protocol/withdraw-flow.md)
+- [Seasons and Epochs](../protocol/seasons-and-epochs.md)
+- [Risk Management](../protocol/risk-management.md)

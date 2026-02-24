@@ -1,69 +1,54 @@
-# AIR3 Docs v2
+# AIR3 Documentation
 
-AIR3 is the flagship AI agent of the AIRewardrop ecosystem and the utility hub for AIR3-powered products.
+AIR3 is the public documentation hub for the AIRewardrop ecosystem.
 
-This documentation reflects the current product stack and protocol direction shown across:
-- AIR3 public site
-- AIRewardrop company hub
-- AIRdApp product interfaces
-- AIRTrading Engine / Pacifica execution design
-- AIRTrack live testing and simulation workflows
+It documents the AIR3 agent experience, AIRdApp product surface, AIRTrack strategy validation, AIRTrading protocol logic, AIR3 token utility, and the operating rules used to provide transparent user-facing products.
 
-## What AIR3 is
+## What AIR3 includes
 
-AIR3 is an always-on AI agent and MetaHuman live interface focused on crypto market intelligence:
-- on-chain and market analysis
-- social sentiment and trend monitoring
-- real-time charts and reports
-- autonomous posting and live interaction (X, Twitch, YouTube, Telegram, Discord)
-- tokenized utility modules and partner-facing services
+- **AIR3 Agent**: AI-native crypto agent experience across social and community channels.
+- **AIRdApp**: product interface where users can access AIR ecosystem modules.
+- **AIRTrack**: live tracking and simulation environment used to validate strategies on real market data and social momentum signals.
+- **AIRTrading**: real execution layer where strategies may be deployed only after passing live validation on AIRTrack.
+- **AIRSocial / AIRSponsor / AIRTool**: utility modules that expand AIR3 usage through community, sponsorship, and agent rental features.
+- **AIR3 Token Utility**: buy-and-burn mechanisms, rewards, and ecosystem access flows.
 
-## Product stack at a glance
+## Core operating principles
 
-AIR3 is not only a chat agent. It is the front-end token and service layer for a broader stack:
+### 1) AIRTrack and AIRTrading are not the same product
 
-- **AIRTrack**: tracking and simulation layer (no user fund execution)
-- **AIRTrading**: execution layer for vetted strategies only
-- **AIRSocial**: social missions / points / community activity
-- **AIRSponsor**: buy + burn sponsor slots for AIR3 live visibility
-- **AIRTool**: token-gated AIR3 agent rental for third-party Telegram/Discord communities
+AIRTrack is a **tracking, simulation, and validation layer**. It models entries and exits, tracks PnL, and records strategy behavior in a live environment. It does **not** execute real trades.
 
-## Important distinction: AIRTrack vs AIRTrading
+AIRTrading is the **real execution environment**. It is the deployment layer for strategies that have already passed live validation requirements on AIRTrack.
 
-This is a core documentation rule and must stay explicit everywhere:
+**Strategy lifecycle**  
+Idea -> live validation on AIRTrack -> promotion to AIRTrading after passing live tests
 
-- **AIRTrack is tracking/simulation only**
-  - Used to test strategies live
-  - Turns AIR3 X posts / signals into simulated trades
-  - Tracks positions, PnL, and rule-based risk adjustments
-  - No user funds are executed there
+### 2) Transparent trade traceability
 
-- **AIRTrading is real execution**
-  - Operates through the vault execution flow
-  - Runs only strategies that have passed live testing on AIRTrack
-  - Includes vault accounting, withdrawals, epoch settlement, and profit distribution logic
+AIR3 combines **social transparency** and **protocol/accounting transparency**.
 
-## Transparency model (on-chain + social)
+- Trade announcements are posted on X at position opening: https://x.com/AIRewardrop
+- A closing confirmation card is posted when the trade closes, including realized PnL
+- AIRdApp and AIRTrack provide historical tracking and operational context
+- Protocol documentation defines auditable accounting flows for vault exits and epoch settlement
 
-AIR3 transparency is intentionally layered:
-- **On-chain / protocol transparency** for accounting and settlement logic
-- **Product transparency** via AIRdApp / AIRTrack dashboards and history
-- **Social transparency** via trade posts on X (https://x.com/AIRewardrop): open post at entry, confirmation card at close with PnL
+![AIRdApp Home](assets/images/airdapp-home.png)
 
-This makes it easier for users to verify that what they see in the product is also reflected in public social updates.
+*AIRdApp product hub with modular access to AIRTrack, AIRTrading, AIRSocial, AIRSponsor, and AIRTool.*
 
-## Docs structure
+## AIRTrading Engine at a glance
 
-Start here:
-- [Quickstart](getting-started/quickstart.md)
-- [Products Overview](products/overview.md)
-- [AIRTrading Protocol Overview](protocol/overview.md)
-- [Roadmap](roadmap/roadmap-2025-2027.md)
-- [FAQ](resources/faq.md)
+The AIRTrading Engine uses a single vault model with percentage-based user shares. A withdrawal request closes the same percentage of **all** open positions pro-rata, creates an exit balance, and settles through a fixed 7-day delay via an ExitTicket.
 
-## Risk notice (user-friendly but real)
+![AIRTrading Engine Diagram](assets/images/airtrading-engine-diagram.png)
 
-AIR3-related products include analytics, simulations, and protocol concepts for automated execution.
-Trading and DeFi activity carry risk, including loss of capital, execution slippage, fees, and strategy underperformance.
+*High-level AIRTrading Engine architecture showing vault routing, strategy execution, profit splitting, buyback, and user rewards.*
 
-This docs set currently describes an intended **no-leverage** AIRTrading operating model, so liquidation risk is not presented as a default user risk unless that changes in a future version.
+## Where to start
+
+- New readers: [Quickstart](getting-started/quickstart.md)
+- Product overview: [Products Overview](products/overview.md)
+- Protocol logic: [Protocol Overview](protocol/overview.md)
+- Frequently asked questions: [FAQ](resources/faq.md)
+- Official links: [Official Links](resources/official-links.md)
