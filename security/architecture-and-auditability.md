@@ -16,7 +16,7 @@ AIRdApp and AIRTrack provide user-facing visibility into product modules, tracke
 ### 2) Social trade traceability
 
 AIR3 publishes trade-related updates on X through the official AIRRewardrop account:
-- https://x.com/AIRewardrop
+- <https://x.com/AIRewardrop>
 
 Trade communication includes:
 - a trade announcement at position opening

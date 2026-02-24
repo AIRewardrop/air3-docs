@@ -28,7 +28,7 @@ Idea -> live validation on AIRTrack -> promotion to AIRTrading after passing liv
 
 AIR3 combines **social transparency** and **protocol/accounting transparency**.
 
-- Trade announcements are posted on X at position opening: https://x.com/AIRewardrop
+- Trade announcements are posted on X at position opening: <https://x.com/AIRewardrop>
 - A closing confirmation card is posted when the trade closes, including realized PnL
 - AIRdApp and AIRTrack provide historical tracking and operational context
 - Protocol documentation defines auditable accounting flows for vault exits and epoch settlement

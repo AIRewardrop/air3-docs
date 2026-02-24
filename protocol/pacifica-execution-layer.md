@@ -72,26 +72,26 @@ Should manage:
 ## Pacifica documentation links
 
 Core docs:
-- https://docs.pacifica.fi
+- <https://docs.pacifica.fi>
 
 Trading:
-- https://docs.pacifica.fi/trading-on-pacifica/overview
-- https://docs.pacifica.fi/trading-on-pacifica/margin-and-leverage
-- https://docs.pacifica.fi/trading-on-pacifica/liquidations
-- https://docs.pacifica.fi/trading-on-pacifica/funding-rates
-- https://docs.pacifica.fi/trading-on-pacifica/trading-fees
-- https://docs.pacifica.fi/trading-on-pacifica/contract-specifications/oracle-price-and-mark-price
-- https://docs.pacifica.fi/trading-on-pacifica/fund-security
-- https://docs.pacifica.fi/trading-on-pacifica/deposits-and-withdrawals
+- <https://docs.pacifica.fi/trading-on-pacifica/overview>
+- <https://docs.pacifica.fi/trading-on-pacifica/margin-and-leverage>
+- <https://docs.pacifica.fi/trading-on-pacifica/liquidations>
+- <https://docs.pacifica.fi/trading-on-pacifica/funding-rates>
+- <https://docs.pacifica.fi/trading-on-pacifica/trading-fees>
+- <https://docs.pacifica.fi/trading-on-pacifica/contract-specifications/oracle-price-and-mark-price>
+- <https://docs.pacifica.fi/trading-on-pacifica/fund-security>
+- <https://docs.pacifica.fi/trading-on-pacifica/deposits-and-withdrawals>
 
 API:
-- https://docs.pacifica.fi/api-documentation/api/rest-api
-- https://docs.pacifica.fi/api-documentation/api/signing
-- https://docs.pacifica.fi/api-documentation/api/rate-limits
-- https://docs.pacifica.fi/api-documentation/api/websocket
+- <https://docs.pacifica.fi/api-documentation/api/rest-api>
+- <https://docs.pacifica.fi/api-documentation/api/signing>
+- <https://docs.pacifica.fi/api-documentation/api/rate-limits>
+- <https://docs.pacifica.fi/api-documentation/api/websocket>
 
 Programs:
-- https://docs.pacifica.fi/builder-program
+- <https://docs.pacifica.fi/builder-program>
 
 ## Documentation note
 

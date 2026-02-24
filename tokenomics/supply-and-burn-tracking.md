@@ -1,29 +1,53 @@
-# Supply and Burn Tracking
+# Supply, Burns, and Reporting
 
-## AIR3 token mint (CA)
+This page documents the AIR3 supply framework and the reporting approach used in public-facing documentation.
 
-- AIR3 token mint (contract address): `EMu7evjiKvpUutzCKYhPQNpTjeRdEmWZKKE3y6eWpP3q`
+## Supply Baseline
 
-## Circulating supply tracking
+- **Initial launch supply:** `1,000,000,000 AIR3` (fair launch)
+- **Network:** Solana
+- **Token mint (CA):** `2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon`
 
-Circulating supply changes over time due to market activity, custody distribution, and burn mechanics. The recommended public reference is:
+## Reporting Method
 
-- GeckoTerminal AIR3/SOL pool page (market cap and token price references)
-- DexScreener market page
-- Solana explorers and token dashboards as available
+For AIR3, the most useful public supply view is:
 
-## Burn tracking
+**Effective circulating profile = launch supply - burned tokens (plus any implementation-specific exclusions if disclosed).**
 
-The AIR3 ecosystem uses public on-chain tracking for burn-related transparency.
+In practice, users should verify current values through public dashboards and explorers because these values change over time.
 
-- Burn tracking address (public reference): `2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon`
-- Solscan (burn tracking reference): https://solscan.io/account/2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon
+## Burns
 
-## Documentation policy for live metrics
+AIR3 documentation tracks burns through publicly verifiable on-chain references (burn address and explorer links).
 
-Because burn totals and circulating metrics are continuously changing, this documentation keeps:
-- the authoritative addresses
-- the explorer links
-- the methodology context
+### Burn tracking reference
+- [Solscan token page (AIR3)](https://solscan.io/token/2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon)
+- [Burn address (Solana incinerator)](https://solscan.io/account/1nc1nerator11111111111111111111111111111111)
 
-For dashboards and public-facing cards, current totals should be fetched live from the referenced sources rather than manually copied into static docs.
+## Current snapshot example (replaceable, timestamped)
+
+The docs may show a timestamped snapshot for user convenience, while the explorer/dashboard remains the source of truth for live values.
+
+Example snapshot (from user-provided market dashboard image):
+- **Total supply:** `969.25M AIR3`
+- **Circulating supply:** `969.25M AIR3`
+- **Holders:** `446`
+- **Market cap (snapshot):** `$119.81K`
+
+This implies that more than 3% of the initial 1B supply has been burned (exact burn total should always be checked on-chain at the time of reading).
+
+## Dev Wallet Disclosure (public docs wording)
+
+Where the team discloses a dev wallet balance (for example, ~19.65M AIR3 in current documentation discussions), it should be reported as:
+- a **wallet balance disclosure**
+- not a substitute for explorer-based supply calculations
+- subject to change over time
+
+Use precise timestamps when publishing wallet balance figures in docs or announcements.
+
+## Documentation policy for live values
+
+To keep the docs professional and accurate:
+- Use narrative explanations in the main tokenomics pages.
+- Link users to the live dashboards for current values.
+- If publishing numeric snapshots, label them clearly with date/time and data source.

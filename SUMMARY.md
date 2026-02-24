@@ -15,16 +15,16 @@
 - [AIRSponsor](products/airsponsor.md)
 - [AIRTool](products/airtool.md)
 
-## AIRTrading Protocol
-- [Whitepaper Index](protocol/whitepaper-index.md)
+## Protocol
 - [Protocol Overview](protocol/overview.md)
 - [Vault Model](protocol/vault-model.md)
-- [Withdraw Flow](protocol/withdraw-flow.md)
-- [Seasons and Epochs](protocol/seasons-and-epochs.md)
+- [Withdraw Flow (7-Day Delay)](protocol/withdraw-flow.md)
+- [Season and Epoch Accounting](protocol/seasons-and-epochs.md)
 - [Rewards and Buyback](protocol/rewards-and-buyback.md)
-- [Pacifica Execution Layer](protocol/pacifica-execution-layer.md)
 - [Risk Management](protocol/risk-management.md)
+- [Pacifica Execution Layer](protocol/pacifica-execution-layer.md)
 - [Worked Examples](protocol/worked-examples.md)
+- [Whitepaper Index](protocol/whitepaper-index.md)
 
 ## Token Utility
 - [Utility Flywheel](token/utility-flywheel.md)
@@ -32,8 +32,8 @@
 
 ## Tokenomics
 - [Tokenomics Overview](tokenomics/overview.md)
-- [Market and Liquidity References](tokenomics/market-and-liquidity.md)
-- [Supply and Burn Tracking](tokenomics/supply-and-burn-tracking.md)
+- [Supply, Burns, and Reporting](tokenomics/supply-and-burn-tracking.md)
+- [Market Structure and Liquidity](tokenomics/market-and-liquidity.md)
 - [Contracts and Addresses](tokenomics/contracts-and-addresses.md)
 
 ## Security and Risk
@@ -41,7 +41,6 @@
 - [Risks, Limits, and Disclaimers](security/risks-limits-and-disclaimers.md)
 
 ## FAQ
-- [FAQ Hub](faq/index.md)
 - [General FAQ](faq/faq-general.md)
 - [AIR3 Agent FAQ](faq/faq-air3-agent.md)
 - [AIRTrack FAQ](faq/faq-airtrack.md)
@@ -50,7 +49,6 @@
 ## Resources
 - [AIR3 User Command Manual](resources/command-manual.md)
 - [Official Links](resources/official-links.md)
-- [Docs Migration Notes](resources/docs-migration-notes.md)
 
 ## Roadmap
 - [Roadmap 2025-2027](roadmap/roadmap-2025-2027.md)

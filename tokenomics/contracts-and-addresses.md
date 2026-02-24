@@ -1,21 +1,41 @@
 # Contracts and Addresses
 
-This page groups public addresses relevant to the AIR3 ecosystem and planned protocol deployment.
+This page collects the AIR3 token address, public liquidity references, and protocol-related addresses used in the AIR3 documentation.
 
-## Token and market references
+## AIR3 Token (Solana)
 
-- AIR3 token mint (CA): `EMu7evjiKvpUutzCKYhPQNpTjeRdEmWZKKE3y6eWpP3q`
-- Primary Meteora pool address: `52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE`
-- Meteora DLMM pool address: `2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp`
+- **Symbol:** `AIR3`
+- **Network:** `Solana`
+- **Token CA (mint):** `2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon`
 
-## Treasury and protocol addresses
+Explorer:
+- [Solscan — AIR3 token](https://solscan.io/token/2jvsWRkT17ofmv9pkW7ofqAFWSCNyJYdykJ7kPKbmoon)
 
-- Treasury (team multisig 3/4): `GHuosFEJTtgBYowKPhDSMLkxiDpdL8SbV7i9vwLgPhsR`
-- Executor (planned / protocol module): `8poDMAhP6fnQPuJ7g1qZ6xJcK7d83pzo2iMoAmQgzyS2`
-- Vault contract / account: `TBD (to be published at deployment)`
+## Liquidity References (Meteora)
 
-## Publishing policy
+- **Meteora Pool (constant):** `52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE`
+- **Meteora DLMM Pool:** `2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp`
 
-- Addresses are published here when they are final and public.
-- Planned or pre-deployment addresses are clearly marked.
-- Any upgrade or migration should be reflected in this page and announced through official channels.
+Links:
+- [Meteora Pool](https://www.meteora.ag/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+- [Meteora DLMM](https://www.meteora.ag/dlmm/2m1CJG7ayjhin5wPwHDTtUKgeMrXCbDiUm8vBEhi1KCp)
+- [DexScreener](https://dexscreener.com/solana/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+- [GeckoTerminal](https://www.geckoterminal.com/it/solana/pools/52utUc1BdCp8iYtNfHTj2UUBrAWEkrDuVVR2vGgcoRJE)
+
+## Public Burn and Treasury References
+
+- **Burn address (Solana incinerator):** `1nc1nerator11111111111111111111111111111111`
+- **Treasury (team multisig 3/4):** `GHuosFEJTtgBYowKPhDSMLkxiDpdL8SbV7i9vwLgPhsR`
+
+## Planned / Upcoming Protocol Addresses (to be published at deployment)
+
+These addresses are included for documentation planning and may be updated before production deployment:
+
+- **Executor module:** `8poDMAhP6fnQPuJ7g1qZ6xJcK7d83pzo2iMoAmQgzyS2`
+- **Valut / Value module:** `TBD`
+- **Vault contract/account:** `TBD`
+
+## Publication Standard
+
+- Final deployed addresses should be published only after deployment and verification.
+- Any address change should be reflected in this page and announced through official AIR3 channels.

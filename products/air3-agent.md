@@ -38,4 +38,4 @@ This structure makes trade communication easier to follow for both community use
 ## Official channel reference
 
 Primary X account for trade-related posts and updates:
-- https://x.com/AIRewardrop
+- <https://x.com/AIRewardrop>
