@@ -29,3 +29,8 @@ This package is a Docs v2 content refresh intended to replace or progressively o
 
 AIRTrack is documented as tracking/simulation only.
 AIRTrading is documented as execution only for strategies validated on AIRTrack.
+
+
+## Latest structure update
+- FAQ pages moved to a standalone top-level `faq/` section.
+- Tokenomics restored as a dedicated top-level section.

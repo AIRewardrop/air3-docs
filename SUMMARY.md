@@ -27,21 +27,30 @@
 - [Worked Examples](protocol/worked-examples.md)
 
 ## Token Utility
-- [AIR3 Utility Flywheel](token/utility-flywheel.md)
+- [Utility Flywheel](token/utility-flywheel.md)
 - [Token Utility by Product](token/token-utility-by-product.md)
 
-## Security and Transparency
+## Tokenomics
+- [Tokenomics Overview](tokenomics/overview.md)
+- [Market and Liquidity References](tokenomics/market-and-liquidity.md)
+- [Supply and Burn Tracking](tokenomics/supply-and-burn-tracking.md)
+- [Contracts and Addresses](tokenomics/contracts-and-addresses.md)
+
+## Security and Risk
 - [Architecture and Auditability](security/architecture-and-auditability.md)
 - [Risks, Limits, and Disclaimers](security/risks-limits-and-disclaimers.md)
 
-## Roadmap
-- [Roadmap 2025-2027](roadmap/roadmap-2025-2027.md)
+## FAQ
+- [FAQ Hub](faq/index.md)
+- [General FAQ](faq/faq-general.md)
+- [AIR3 Agent FAQ](faq/faq-air3-agent.md)
+- [AIRTrack FAQ](faq/faq-airtrack.md)
+- [AIRTrading FAQ](faq/faq-airtrading.md)
 
 ## Resources
-- [User Commands (AIR3 Engine)](resources/command-manual.md)
-- [FAQ Hub](resources/faq.md)
-- [General FAQ](resources/faq-general.md)
-- [AIR3 Agent FAQ](resources/faq-air3-agent.md)
-- [AIRTrack FAQ](resources/faq-airtrack.md)
-- [AIRTrading FAQ](resources/faq-airtrading.md)
+- [AIR3 User Command Manual](resources/command-manual.md)
 - [Official Links](resources/official-links.md)
+- [Docs Migration Notes](resources/docs-migration-notes.md)
+
+## Roadmap
+- [Roadmap 2025-2027](roadmap/roadmap-2025-2027.md)
