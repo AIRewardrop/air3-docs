@@ -8,6 +8,7 @@
 - AIRdApp portal: https://airdapp.airewardrop.xyz
 - AIRTrack app: https://airtrack.airewardrop.xyz
 - AIR3 GitBook docs: https://airewardrop.gitbook.io/air3
+- AIR3 on X (trade posts / transparency): https://x.com/AIRewardrop
 
 ## Pacifica (execution venue docs)
 - Pacifica Docs: https://docs.pacifica.fi

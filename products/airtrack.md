@@ -50,6 +50,19 @@ Example principle:
 
 This makes AIRTrack useful not only for performance reporting, but also for strategy QA.
 
+## Social traceability (X) + dashboard traceability
+
+AIR3 adds a second transparency layer beyond the dashboard itself.
+
+For tracked strategies and agent-driven trade narratives:
+- trade openings are posted on X (https://x.com/AIRewardrop)
+- trade closures are posted with a confirmation card and realized PnL
+- users can cross-check social posts with AIRdApp / AIRTrack history
+
+This gives the ecosystem both:
+- **dashboard transparency** (trade lifecycle and PnL tracking)
+- **social transparency** (timestamped public posts on X)
+
 ## UI reference
 
 ![AIRTrack Dashboard](../assets/images/airtrack-dashboard.png)
@@ -61,6 +74,15 @@ The dashboard shows:
 - realized PnL stats
 - closed trades history
 - filters and time windows
+
+## X trade post example (social traceability)
+
+![AIR3 X Trade Post Example](../assets/images/x-trade-traceability-example.png)
+
+Example workflow:
+- post at trade open on X
+- monitor in AIRTrack / AIRdApp
+- post close confirmation card with realized PnL on X
 
 ## Why this separation matters
 

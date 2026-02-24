@@ -18,10 +18,11 @@ AIRTrack is a **live testing and transparency layer**, not an execution venue:
 - records realized/unrealized PnL
 - tests rule-based risk management (TP/SL adjustment logic)
 - provides sharable evidence of strategy behavior
+- adds social traceability through X posts tied to trade lifecycle updates
 
 ### AIRTrading (execution)
 AIRTrading is the **real execution vault layer**:
-- strategy execution on Pacifica perpetuals
+- strategy execution on Pacifica
 - vault accounting and user shares
 - withdrawal requests with delayed payout
 - season/epoch profit settlement

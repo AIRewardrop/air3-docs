@@ -37,14 +37,23 @@ The protocol should make it possible to verify, at minimum:
 - claimable amount
 - claim execution amount
 
-## Operational transparency
+## Operational transparency (beyond on-chain)
 
-Beyond on-chain events, off-chain execution transparency is highly recommended:
+Beyond on-chain events, AIR3 should provide clear off-chain execution visibility where possible:
 - order execution logs
 - reduce-only confirmations
 - slippage metrics
 - error/retry telemetry
 - epoch settlement reports
+
+## Social traceability (X) as a transparency layer
+
+AIR3 also adds public, timestamped social traceability:
+- trade opening posts on X (https://x.com/AIRewardrop)
+- trade closure confirmation cards with PnL on X
+- cross-checking against AIRdApp / AIRTrack pages
+
+This does not replace on-chain auditability, but it improves public verifiability and user confidence.
 
 ## AIRTrack as a transparency complement
 

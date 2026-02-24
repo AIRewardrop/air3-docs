@@ -2,7 +2,7 @@
 
 AIR3 is the flagship AI agent of the AIRewardrop ecosystem and the utility hub for AIR3-powered products.
 
-This documentation has been updated to reflect the current product stack and the protocol direction shown across:
+This documentation reflects the current product stack and protocol direction shown across:
 - AIR3 public site
 - AIRewardrop company hub
 - AIRdApp product interfaces
@@ -43,6 +43,15 @@ This is a core documentation rule and must stay explicit everywhere:
   - Runs only strategies that have passed live testing on AIRTrack
   - Includes vault accounting, withdrawals, epoch settlement, and profit distribution logic
 
+## Transparency model (on-chain + social)
+
+AIR3 transparency is intentionally layered:
+- **On-chain / protocol transparency** for accounting and settlement logic
+- **Product transparency** via AIRdApp / AIRTrack dashboards and history
+- **Social transparency** via trade posts on X (https://x.com/AIRewardrop): open post at entry, confirmation card at close with PnL
+
+This makes it easier for users to verify that what they see in the product is also reflected in public social updates.
+
 ## Docs structure
 
 Start here:
@@ -52,6 +61,9 @@ Start here:
 - [Roadmap](roadmap/roadmap-2025-2027.md)
 - [FAQ](resources/faq.md)
 
-## Risk notice
+## Risk notice (user-friendly but real)
 
-AIR3-related products include analytics, simulations, and protocol concepts for automated execution. Trading and DeFi activity carry risk, including loss of capital, execution slippage, funding costs, and liquidation risk.
+AIR3-related products include analytics, simulations, and protocol concepts for automated execution.
+Trading and DeFi activity carry risk, including loss of capital, execution slippage, fees, and strategy underperformance.
+
+This docs set currently describes an intended **no-leverage** AIRTrading operating model, so liquidation risk is not presented as a default user risk unless that changes in a future version.
